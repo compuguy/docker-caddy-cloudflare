@@ -5,5 +5,5 @@ RUN xcaddy build \
     --with github.com/WeidiDeng/caddy-cloudflare-ip \
     --with github.com/mholt/caddy-l4 \
 
-FROM caddy:2.8-alpine
+FROM caddy:2.8-alpine AS caddy
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
